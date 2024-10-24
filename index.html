@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Dashboard - Capital One</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #00467F;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0071CE;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: #00467F;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .customer-info,
+        .account-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .customer-info div,
+        .account-details div {
+            width: 48%;
+        }
+
+        .info-label {
+            color: #0071CE;
+            font-weight: bold;
+        }
+
+        .info-value {
+            margin-bottom: 10px;
+        }
+
+        .interaction-form {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .interaction-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .interaction-form textarea,
+        .interaction-form input[type="text"],
+        .interaction-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .interaction-form button {
+            background-color: #0071CE;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .interaction-form button:hover {
+            background-color: #00467F;
+        }
+
+        footer {
+            background-color: #00467F;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Agent Dashboard - Capital One</h1>
+    </header>
+
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Customer Search</a>
+        <a href="#">Recent Interactions</a>
+        <a href="#">Support</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Customer Information</h2>
+        <div class="customer-info">
+            <div>
+                <div class="info-label">Name:</div>
+                <div class="info-value">John Doe</div>
+
+                <div class="info-label">Customer ID:</div>
+                <div class="info-value">CUST123456</div>
+
+                <div class="info-label">Phone Number:</div>
+                <div class="info-value">(555) 555-1234</div>
+
+                <div class="info-label">Email:</div>
+                <div class="info-value">johndoe@email.com</div>
+            </div>
+            <div>
+                <div class="info-label">Address:</div>
+                <div class="info-value">123 Main St, Anytown, VA 12345</div>
+
+                <div class="info-label">Account Status:</div>
+                <div class="info-value">Active</div>
+
+                <div class="info-label">Preferred Contact:</div>
+                <div class="info-value">Email</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Account Details</h2>
+        <div class="account-details">
+            <div>
+                <div class="info-label">Checking Account:</div>
+                <div class="info-value">$5,120.75</div>
+
+                <div class="info-label">Savings Account:</div>
+                <div class="info-value">$12,340.50</div>
+            </div>
+            <div>
+                <div class="info-label">Credit Card Balance:</div>
+                <div class="info-value">$850.25</div>
+
+                <div class="info-label">Loan Amount:</div>
+                <div class="info-value">$15,000.00</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Interaction Log</h2>
+        <div class="interaction-form">
+            <label for="interaction-type">Interaction Type</label>
+            <select id="interaction-type">
+                <option value="account-update">Account Update</option>
+                <option value="transaction-inquiry">Transaction Inquiry</option>
+                <option value="dispute">Dispute</option>
+                <option value="support">Customer Support</option>
+            </select>
+
+            <label for="interaction-notes">Interaction Notes</label>
+            <textarea id="interaction-notes" rows="5" placeholder="Enter notes from the interaction..."></textarea>
+
+            <button type="submit">Submit Interaction</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Capital One. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
