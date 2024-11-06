@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-        <!-- Google tag (gtag.js) -->
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0T0SLNEXP"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -27,100 +27,232 @@
     })(window,document,'script','dataLayer','GTM-52P8KCVD');</script>
     <!-- End Google Tag Manager -->
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Dashboard - Capital One</title>
+    <title>Customer Service Portal</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0056b3;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #004494;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .content {
+            display: none; /* Hide all content by default */
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .info-label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .info-value {
+            margin-bottom: 10px;
+        }
+
+        .dropdown {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e7f3ff;
+        }
+
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f1f1f1;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Styles for Customer Search */
+        .search-container {
+            margin-top: 10px;
+        }
+
+        .search-input {
+            width: calc(100% - 110px); /* Full width minus button */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
 
+    
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWTR5NM8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52P8KCVD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52P8KCVD"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
 
     <header>
         <h1>Agent Dashboard - Capital One</h1>
     </header>
 
     <nav>
-        <a href="#">Dashboard</a>
-        <a href="#">Customer Search</a>
-        <a href="#">Recent Interactions</a>
-        <a href="#">Support</a>
+        <a onclick="showContent('dashboard')">Dashboard</a>
+        <a onclick="showContent('customerSearch')">Customer Search</a>
+        <a onclick="showContent('recentInteractions')">Recent Interactions</a>
+        <a onclick="showContent('support')">Support</a>
     </nav>
 
     <div class="container">
-        <h2 class="section-title" onclick="toggleSection('customer-info')">Customer Information</h2>
-        <div id="customer-info" class="dropdown-content">
-            <div class="customer-info">
-                <div>
-                    <div class="info-label">Name:</div>
-                    <div class="info-value">John Doe</div>
+        <div id="dashboard" class="content">
+            <h2 class="dropdown" onclick="toggleDropdown('customerInfo')">Customer Information</h2>
+            <div id="customerInfo" class="dropdown-content">
+                <div class="customer-info">
+                    <div>
+                        <div class="info-label">Name:</div>
+                        <div class="info-value">John Doe</div>
 
-                    <div class="info-label">Customer ID:</div>
-                    <div class="info-value">CUST123456</div>
+                        <div class="info-label">Customer ID:</div>
+                        <div class="info-value">CUST123456</div>
 
-                    <div class="info-label">Phone Number:</div>
-                    <div class="info-value">(555) 555-1234</div>
+                        <div class="info-label">Phone Number:</div>
+                        <div class="info-value">(555) 555-1234</div>
 
-                    <div class="info-label">Email:</div>
-                    <div class="info-value">johndoe@email.com</div>
+                        <div class="info-label">Email:</div>
+                        <div class="info-value">johndoe@email.com</div>
+                    </div>
+                    <div>
+                        <div class="info-label">Address:</div>
+                        <div class="info-value">123 Main St, Anytown, VA 12345</div>
+
+                        <div class="info-label">Account Status:</div>
+                        <div class="info-value">Active</div>
+
+                        <div class="info-label">Preferred Contact:</div>
+                        <div class="info-value">Email</div>
+                    </div>
                 </div>
-                <div>
-                    <div class="info-label">Address:</div>
-                    <div class="info-value">123 Main St, Anytown, VA 12345</div>
+            </div>
 
-                    <div class="info-label">Account Status:</div>
-                    <div class="info-value">Active</div>
+            <h2 class="dropdown" onclick="toggleDropdown('accountDetails')">Account Details</h2>
+            <div id="accountDetails" class="dropdown-content">
+                <div class="account-details">
+                    <div>
+                        <div class="info-label">Checking Account:</div>
+                        <div class="info-value">$5,120.75</div>
 
-                    <div class="info-label">Preferred Contact:</div>
-                    <div class="info-value">Email</div>
+                        <div class="info-label">Savings Account:</div>
+                        <div class="info-value">$12,340.50</div>
+                    </div>
+                    <div>
+                        <div class="info-label">Credit Card Balance:</div>
+                        <div class="info-value">$850.25</div>
+
+                        <div class="info-label">Loan Amount:</div>
+                        <div class="info-value">$15,000.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="dropdown" onclick="toggleDropdown('interactionLog')">Interaction Log</h2>
+            <div id="interactionLog" class="dropdown-content">
+                <div class="interaction-form">
+                    <label for="interaction-type">Interaction Type</label>
+                    <select id="interaction-type">
+                        <option value="account-update">Account Update</option>
+                        <option value="transaction-inquiry">Transaction Inquiry</option>
+                        <option value="dispute">Dispute</option>
+                        <option value="support">Customer Support</option>
+                    </select>
+
+                    <label for="interaction-notes">Interaction Notes</label>
+                    <textarea id="interaction-notes" rows="5" placeholder="Enter notes from the interaction..."></textarea>
+
+                    <button type="submit">Submit Interaction</button>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title" onclick="toggleSection('account-details')">Account Details</h2>
-        <div id="account-details" class="dropdown-content">
-            <div class="account-details">
-                <div>
-                    <div class="info-label">Checking Account:</div>
-                    <div class="info-value">$5,120.75</div>
-
-                    <div class="info-label">Savings Account:</div>
-                    <div class="info-value">$12,340.50</div>
-                </div>
-                <div>
-                    <div class="info-label">Credit Card Balance:</div>
-                    <div class="info-value">$850.25</div>
-
-                    <div class="info-label">Loan Amount:</div>
-                    <div class="info-value">$15,000.00</div>
-                </div>
+        <div id="customerSearch" class="content">
+            <h2>Customer Search</h2>
+            <div class="search-container">
+                <input type="text" id="customerSearchInput" class="search-input" placeholder="Enter Customer ID or Name...">
+                <button class="search-button" onclick="performSearch()">Search</button>
             </div>
+            <p id="searchResult" style="margin-top: 10px;"></p>
         </div>
 
-        <h2 class="section-title" onclick="toggleSection('interaction-log')">Interaction Log</h2>
-        <div id="interaction-log" class="dropdown-content">
-            <div class="interaction-form">
-                <label for="interaction-type">Interaction Type</label>
-                <select id="interaction-type">
-                    <option value="account-update">Account Update</option>
-                    <option value="transaction-inquiry">Transaction Inquiry</option>
-                    <option value="dispute">Dispute</option>
-                    <option value="support">Customer Support</option>
-                </select>
-
-                <label for="interaction-notes">Interaction Notes</label>
-                <textarea id="interaction-notes" rows="5" placeholder="Enter notes from the interaction..."></textarea>
-
-                <button type="submit">Submit Interaction</button>
-            </div>
+        <div id="recentInteractions" class="content">
+            <h2>Recent Interactions</h2>
+            <p>View recent customer interactions here.</p>
+        </div>
+        <div id="support" class="content">
+            <h2>Support</h2>
+            <p>Get support information and resources.</p>
         </div>
     </div>
 
@@ -128,8 +260,43 @@
         <p>&copy; 2024 Capital One. All rights reserved.</p>
     </footer>
 
-    <!-- Link to the external JavaScript file -->
-    <script src="script.js"></script>
-</body>
+    <script>
+        // Function to show the selected content
+        function showContent(contentId) {
+            // Hide all content sections
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
 
+            // Show the selected content
+            var selectedContent = document.getElementById(contentId);
+            selectedContent.style.display = 'block';
+        }
+
+        // Function to toggle dropdown content visibility
+        function toggleDropdown(dropdownId) {
+            var dropdownContent = document.getElementById(dropdownId);
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Function to perform the search
+        function performSearch() {
+            var input = document.getElementById('customerSearchInput').value;
+            var result = document.getElementById('searchResult');
+
+            // Simulate search operation (you can replace this with actual search logic)
+            if (input) {
+                result.textContent = 'Searching for customer: ' + input;
+            } else {
+                result.textContent = 'Please enter a customer ID or name to search.';
+            }
+        }
+
+        // Show the dashboard by default when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            showContent('dashboard');
+        });
+    </script>
+</body>
 </html>
