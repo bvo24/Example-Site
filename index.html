@@ -161,15 +161,15 @@
     </header>
 
     <nav>
-        <a onclick="showContent('dashboard')">Dashboard</a>
-        <a onclick="showContent('customerSearch')">Customer Search</a>
-        <a onclick="showContent('recentInteractions')">Recent Interactions</a>
-        <a onclick="showContent('support')">Support</a>
+        <a id = "nav-dashboard" onclick="showContent('dashboard')">Dashboard</a>
+        <a id = "nav-customerSearch" onclick="showContent('customerSearch')">Customer Search</a>
+        <a id = "nav-recentInteractions" onclick="showContent('recentInteractions')">Recent Interactions</a>
+        <a id = "nav-support" onclick="showContent('support')">Support</a>
     </nav>
 
     <div class="container">
         <div id="dashboard" class="content">
-            <h2 class="dropdown" onclick="toggleDropdown('customerInfo')">Customer Information</h2>
+            <h2 id="header-customerInfo" class="dropdown" onclick="toggleDropdown('customerInfo')">Customer Information</h2>
             <div id="customerInfo" class="dropdown-content">
                 <div class="customer-info">
                     <div>
@@ -198,7 +198,7 @@
                 </div>
             </div>
 
-            <h2 class="dropdown" onclick="toggleDropdown('accountDetails')">Account Details</h2>
+            <h2 id="header-accountDetails" class="dropdown" onclick="toggleDropdown('accountDetails')">Account Details</h2>
             <div id="accountDetails" class="dropdown-content">
                 <div class="account-details">
                     <div>
@@ -218,7 +218,7 @@
                 </div>
             </div>
 
-            <h2 class="dropdown" onclick="toggleDropdown('interactionLog')">Interaction Log</h2>
+            <h2 id="header-interactionLog"  class="dropdown" onclick="toggleDropdown('interactionLog')">Interaction Log</h2>
             <div id="interactionLog" class="dropdown-content">
                 <div class="interaction-form">
                     <label for="interaction-type">Interaction Type</label>
@@ -232,7 +232,7 @@
                     <label for="interaction-notes">Interaction Notes</label>
                     <textarea id="interaction-notes" rows="5" placeholder="Enter notes from the interaction..."></textarea>
 
-                    <button type="submit">Submit Interaction</button>
+                    <button id="submit-interaction" type="submit">Submit Interaction</button>
                 </div>
             </div>
         </div>
@@ -241,7 +241,7 @@
             <h2>Customer Search</h2>
             <div class="search-container">
                 <input type="text" id="customerSearchInput" class="search-input" placeholder="Enter Customer ID or Name...">
-                <button class="search-button" onclick="performSearch()">Search</button>
+                <button id="search-button" class="search-button" onclick="performSearch()">Search</button>
             </div>
             <p id="searchResult" style="margin-top: 10px;"></p>
         </div>
