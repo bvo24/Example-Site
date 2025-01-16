@@ -240,7 +240,7 @@
         <div id="customerSearch" class="content">
             <h2>Customer Search</h2>
             <div class="search-container">
-                <input type="text" id="customerSearchInput" class="search-input" placeholder="Enter Customer ID or Name...">
+                <input type="text" id="customerSearchInput" class="search-input" placeholder="Enter Customer ID or Name..." onkeyup="dataLayer.push({event:'textChanged', eventAction: this.value, eventLabel: location.href, eventValue: 0.0});">
                 <button id="search-button" class="search-button" onclick="performSearch()">Search</button>
             </div>
             <p id="searchResult" style="margin-top: 10px;"></p>
